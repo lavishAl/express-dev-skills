@@ -1,15 +1,24 @@
 const skills = [
 {id: 1, skill: 'html', have: true},
-{id: 1, skill: 'c++', have: false},
-{id: 1, skill: 'java', have: true},
-{id: 1, skill: 'R', have: false},
+{id: 2, skill: 'c++', have: false},
+{id: 3, skill: 'java', have: true},
+{id: 4, skill: 'R', have: false},
 ];
 
 module.exports = {
     getAll,
-    getOne
-
+    getOne,
+    create,
+    deleteOne
 };
+
+function deleteOne(id) {
+    skills.splice(id, 1);
+}
+
+function create(skill) {
+    skills.push(skill);
+}
 
 
 function getAll() {
